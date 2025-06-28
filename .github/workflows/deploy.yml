@@ -60,7 +60,7 @@ jobs:
       
       - name: Git submodules init
         run: |
-          [ -f .gitmodules ] && git submodule update --init
+          [ -f .gitmodules ] && rm -rf src/app/@angular/components && git submodule update --init
 
       - name: Install dependencies
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
