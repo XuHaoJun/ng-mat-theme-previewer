@@ -5,13 +5,37 @@
   "compilerOptions": {
     "outDir": "./out-tsc/app",
     "types": [
-      "node"
+      "node",
+      "@angular/localize"
     ]
   },
   "include": [
     "src/**/*.ts"
   ],
   "exclude": [
-    "src/**/*.spec.ts"
+    "src/**/*.spec.ts",
+    "src/app/@angular/components/docs/**/*.ts",
+    "src/app/@angular/components/goldens/**/*.ts",
+    "src/app/@angular/components/guides/**/*.ts",
+    "src/app/@angular/components/integration/**/*.ts",
+    "src/app/@angular/components/scripts/**/*.ts",
+    "src/app/@angular/components/tests/**/*.ts",
+    "src/app/@angular/components/tools/**/*.ts",
+    "src/app/@angular/components/src/cdk/**/*.ts",
+    "src/app/@angular/components/src/cdk-experimental/**/*.ts",
+    "src/app/@angular/components/src/dev-app/**/*.ts",
+    "src/app/@angular/components/src/e2e-app/**/*.ts",
+    "src/app/@angular/components/src/google-maps/**/*.ts",
+    "src/app/@angular/components/src/material/**/*.ts",
+    "src/app/@angular/components/src/material-date-fns-adapter/**/*.ts",
+    "src/app/@angular/components/src/material-experimental/**/*.ts",
+    "src/app/@angular/components/src/material-luxon-adapter/**/*.ts",
+    "src/app/@angular/components/src/material-moment-adapter/**/*.ts",
+    "src/app/@angular/components/src/universal-app/**/*.ts",
+    "src/app/@angular/components/src/youtube-player/**/*.ts",
+    "src/app/@angular/components/src/components-examples/cdk/**/*.ts",
+    "src/app/@angular/components/src/components-examples/cdk-experimental/**/*.ts",
+    "src/app/@angular/components/src/components-examples/material-experimental/**/*.ts",
+    "src/app/@angular/components/src/components-examples/private/**/*.ts",
   ]
 }

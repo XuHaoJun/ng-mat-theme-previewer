@@ -1,0 +1,3 @@
+[submodule "src/app/@angular/components"]
+	path = src/app/@angular/components
+	url = https://github.com/angular/components.git
