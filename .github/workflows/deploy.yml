@@ -53,7 +53,7 @@ jobs:
         uses: actions/cache@v4
         with:
           path: |
-            src/app
+            .angular/cache
           key: ${{ runner.os }}-ng-${{ hashFiles('**/package-lock.json', '**/yarn.lock') }}
           restore-keys: |
             ${{ runner.os }}-ng-${{ hashFiles('**/package-lock.json', '**/yarn.lock') }}
