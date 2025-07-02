@@ -54,26 +54,224 @@ import { FormsModule } from '@angular/forms';
       <!-- Buttons Section -->
       <mat-card class="showcase-section">
         <mat-card-header>
-          <mat-card-title>Buttons</mat-card-title>
+          <mat-card-title>Buttons & System Tokens</mat-card-title>
+          <mat-card-subtitle>Left: Button Preview | Right: System Token Information</mat-card-subtitle>
         </mat-card-header>
         <mat-card-content>
-          <div class="button-showcase">
-            <button mat-raised-button color="primary">Primary Raised</button>
-            <button mat-flat-button color="primary">Primary Flat</button>
-            <button mat-stroked-button color="primary">Primary Stroked</button>
-            <button mat-button color="primary">Primary Basic</button>
-            
-            <button mat-raised-button color="accent">Secondary Raised</button>
-            <button mat-flat-button color="accent">Secondary Flat</button>
-            <button mat-stroked-button color="accent">Secondary Stroked</button>
-            <button mat-button color="accent">Secondary Basic</button>
+          <div class="button-tokens-showcase">
+            <!-- Filled Button -->
+            <div class="button-token-row">
+              <div class="button-preview">
+                <button mat-raised-button color="primary">Filled Button</button>
+              </div>
+              <div class="token-info">
+                <h4>Filled Button Tokens</h4>
+                <div class="token-grid">
+                  <div class="token-item">
+                    <span class="token-label">Container Color:</span>
+                    <div class="color-preview primary-color"></div>
+                    <span class="token-value">--mdc-filled-button-container-color (primary)</span>
+                  </div>
+                  <div class="token-item">
+                    <span class="token-label">Label Color:</span>
+                    <div class="color-preview on-primary-color"></div>
+                    <span class="token-value">--mdc-filled-button-label-text-color (on-primary)</span>
+                  </div>
+                  <div class="token-item">
+                    <span class="token-label">Typography:</span>
+                    <span class="token-value">label-large (14px, 500 weight)</span>
+                  </div>
+                  <div class="token-item">
+                    <span class="token-label">Shape:</span>
+                    <span class="token-value">--mdc-filled-button-container-shape (full)</span>
+                  </div>
+                </div>
+              </div>
+            </div>
 
-            <button mat-fab color="primary" matTooltip="Primary FAB">
-              <mat-icon>add</mat-icon>
-            </button>
-            <button mat-mini-fab color="accent" matTooltip="Secondary Mini FAB">
-              <mat-icon>edit</mat-icon>
-            </button>
+            <!-- Outlined Button -->
+            <div class="button-token-row">
+              <div class="button-preview">
+                <button mat-stroked-button color="primary">Outlined Button</button>
+              </div>
+              <div class="token-info">
+                <h4>Outlined Button Tokens</h4>
+                <div class="token-grid">
+                  <div class="token-item">
+                    <span class="token-label">Outline Color:</span>
+                    <div class="color-preview outline-color"></div>
+                    <span class="token-value">--mdc-outlined-button-outline-color (outline)</span>
+                  </div>
+                  <div class="token-item">
+                    <span class="token-label">Label Color:</span>
+                    <div class="color-preview primary-color"></div>
+                    <span class="token-value">--mdc-outlined-button-label-text-color (primary)</span>
+                  </div>
+                  <div class="token-item">
+                    <span class="token-label">Outline Width:</span>
+                    <span class="token-value">--mdc-outlined-button-outline-width (1px)</span>
+                  </div>
+                  <div class="token-item">
+                    <span class="token-label">Typography:</span>
+                    <span class="token-value">label-large (14px, 500 weight)</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Text Button -->
+            <div class="button-token-row">
+              <div class="button-preview">
+                <button matButton="text" color="primary">Text Button</button>
+              </div>
+              <div class="token-info">
+                <h4>Text Button Tokens</h4>
+                <div class="token-grid">
+                  <div class="token-item">
+                    <span class="token-label">Label Color:</span>
+                    <div class="color-preview primary-color"></div>
+                    <span class="token-value">--mdc-text-button-label-text-color (primary)</span>
+                  </div>
+                  <div class="token-item">
+                    <span class="token-label">State Layer:</span>
+                    <div class="color-preview primary-color"></div>
+                    <span class="token-value">--mdc-text-button-state-layer-color (primary)</span>
+                  </div>
+                  <div class="token-item">
+                    <span class="token-label">Typography:</span>
+                    <span class="token-value">label-large (14px, 500 weight)</span>
+                  </div>
+                  <div class="token-item">
+                    <span class="token-label">Padding:</span>
+                    <span class="token-value">--mdc-text-button-horizontal-padding (12px)</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Tonal Button -->
+            <div class="button-token-row">
+              <div class="button-preview">
+                <button matButton="tonal" color="primary">Tonal Button</button>
+              </div>
+              <div class="token-info">
+                <h4>Tonal Button Tokens</h4>
+                <div class="token-grid">
+                  <div class="token-item">
+                    <span class="token-label">Container Color:</span>
+                    <div class="color-preview secondary-container-color"></div>
+                    <span class="token-value">--mdc-tonal-button-container-color (secondary-container)</span>
+                  </div>
+                  <div class="token-item">
+                    <span class="token-label">Label Color:</span>
+                    <div class="color-preview on-secondary-container-color"></div>
+                    <span class="token-value">--mdc-tonal-button-label-text-color (on-secondary-container)</span>
+                  </div>
+                  <div class="token-item">
+                    <span class="token-label">Typography:</span>
+                    <span class="token-value">label-large (14px, 500 weight)</span>
+                  </div>
+                  <div class="token-item">
+                    <span class="token-label">Shape:</span>
+                    <span class="token-value">--mdc-tonal-button-container-shape (full)</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Protected Button -->
+            <div class="button-token-row">
+              <div class="button-preview">
+                <button matButton="elevated" color="primary">Elevated Button</button>
+              </div>
+              <div class="token-info">
+                <h4>Elevated Button Tokens</h4>
+                <div class="token-grid">
+                  <div class="token-item">
+                    <span class="token-label">Container Color:</span>
+                    <div class="color-preview surface-color"></div>
+                    <span class="token-value">--mdc-protected-button-container-color (surface)</span>
+                  </div>
+                  <div class="token-item">
+                    <span class="token-label">Label Color:</span>
+                    <div class="color-preview primary-color"></div>
+                    <span class="token-value">--mdc-protected-button-label-text-color (primary)</span>
+                  </div>
+                  <div class="token-item">
+                    <span class="token-label">Elevation:</span>
+                    <span class="token-value">--mdc-protected-button-container-elevation (level1)</span>
+                  </div>
+                  <div class="token-item">
+                    <span class="token-label">Typography:</span>
+                    <span class="token-value">label-large (14px, 500 weight)</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Icon Button -->
+            <div class="button-token-row">
+              <div class="button-preview">
+                <button matButton="filled" color="primary">
+                  <mat-icon>favorite</mat-icon>
+                  Icon Button
+                </button>
+              </div>
+              <div class="token-info">
+                <h4>Icon Button Tokens</h4>
+                <div class="token-grid">
+                  <div class="token-item">
+                    <span class="token-label">Icon Spacing:</span>
+                    <span class="token-value">--mdc-filled-button-icon-spacing (8px)</span>
+                  </div>
+                  <div class="token-item">
+                    <span class="token-label">Icon Offset:</span>
+                    <span class="token-value">--mdc-filled-button-icon-offset (-8px)</span>
+                  </div>
+                  <div class="token-item">
+                    <span class="token-label">Icon Size:</span>
+                    <span class="token-value">18px (Material Icons)</span>
+                  </div>
+                  <div class="token-item">
+                    <span class="token-label">Icon Color:</span>
+                    <div class="color-preview on-primary-color"></div>
+                    <span class="token-value">Inherits from label text color</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- State Information -->
+            <div class="button-token-row states-info">
+              <div class="button-preview">
+                <h4>Button States</h4>
+                <div class="states-demo">
+                  <button matButton="filled" color="primary">Normal</button>
+                  <button matButton="filled" color="primary" disabled>Disabled</button>
+                </div>
+              </div>
+              <div class="token-info">
+                <h4>State Layer Tokens</h4>
+                <div class="token-grid">
+                  <div class="token-item">
+                    <span class="token-label">Hover Opacity:</span>
+                    <span class="token-value">--mdc-filled-button-hover-state-layer-opacity (8%)</span>
+                  </div>
+                  <div class="token-item">
+                    <span class="token-label">Focus Opacity:</span>
+                    <span class="token-value">--mdc-filled-button-focus-state-layer-opacity (12%)</span>
+                  </div>
+                  <div class="token-item">
+                    <span class="token-label">Pressed Opacity:</span>
+                    <span class="token-value">--mdc-filled-button-pressed-state-layer-opacity (12%)</span>
+                  </div>
+                  <div class="token-item">
+                    <span class="token-label">Disabled Container:</span>
+                    <span class="token-value">on-surface (12% opacity)</span>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </mat-card-content>
       </mat-card>
@@ -320,6 +518,116 @@ import { FormsModule } from '@angular/forms';
 
     mat-chip-set {
       max-width: 500px;
+    }
+
+    .button-tokens-showcase {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .button-token-row {
+      display: flex;
+      gap: 32px;
+      align-items: flex-start;
+      padding: 16px;
+      border: 1px solid var(--mat-sys-outline-variant);
+      border-radius: 12px;
+      background: var(--mat-sys-surface-container-lowest);
+    }
+
+    .button-token-row.states-info {
+      background: var(--mat-sys-surface-container-low);
+    }
+
+    .button-preview {
+      flex: 0 0 200px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      align-items: flex-start;
+    }
+
+    .token-info {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .token-info h4 {
+      margin: 0 0 16px 0;
+      color: var(--mat-sys-on-surface);
+      font-size: 16px;
+      font-weight: 500;
+    }
+
+    .token-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 12px;
+    }
+
+    .token-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 8px;
+      background: var(--mat-sys-surface-container);
+      border-radius: 8px;
+    }
+
+    .token-label {
+      font-weight: 500;
+      min-width: 120px;
+      color: var(--mat-sys-on-surface-variant);
+      font-size: 14px;
+    }
+
+    .color-preview {
+      width: 24px;
+      height: 24px;
+      border-radius: 4px;
+      border: 1px solid var(--mat-sys-outline);
+      flex-shrink: 0;
+    }
+
+    .primary-color {
+      background-color: var(--mat-sys-primary);
+    }
+
+    .on-primary-color {
+      background-color: var(--mat-sys-on-primary);
+    }
+
+    .outline-color {
+      background-color: var(--mat-sys-outline);
+    }
+
+    .secondary-container-color {
+      background-color: var(--mat-sys-secondary-container);
+    }
+
+    .on-secondary-container-color {
+      background-color: var(--mat-sys-on-secondary-container);
+    }
+
+    .surface-color {
+      background-color: var(--mat-sys-surface);
+    }
+
+    .token-value {
+      font-family: 'Roboto Mono', monospace;
+      font-size: 12px;
+      color: var(--mat-sys-on-surface);
+      background: var(--mat-sys-surface-variant);
+      padding: 4px 8px;
+      border-radius: 4px;
+      flex: 1;
+    }
+
+    .states-demo {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
     }
   `]
 })
