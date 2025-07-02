@@ -1,6 +1,59 @@
 /* You can add global styles to this file, and also import other style files */
 
+@use '@angular/material' as mat;
 @import 'roboto-300-400-500.css', 'material-icon.css';
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+// Define the initial theme with Material 3 system variables
+html {
+  // Set color-scheme to allow light/dark switching
+  color-scheme: light;
+  
+  // Create M3 theme with system variables enabled
+  @include mat.theme((
+    color: (
+      theme-type: color-scheme, // This enables light-dark() CSS functions
+      primary: mat.$violet-palette,
+      tertiary: mat.$cyan-palette,
+      use-system-variables: true,
+    ),
+    typography: (
+      use-system-variables: true,
+      plain-family: (Roboto, sans-serif),
+      brand-family: (Roboto, sans-serif),
+    ),
+    density: (
+      scale: 0
+    ),
+  ));
+}
+
+// Apply theme surface styles globally
+body { 
+  margin: 0; 
+  height: 100%;
+  background: var(--mat-sys-surface);
+  color: var(--mat-sys-on-surface);
+  font-family: var(--mat-sys-plain-font-family);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+html, body { 
+  height: 100%; 
+}
+
+// Add some custom theme variable overrides for demonstration
+.theme-preview-container {
+  background: var(--mat-sys-surface-container-low);
+  border: 1px solid var(--mat-sys-outline-variant);
+  border-radius: var(--mat-sys-corner-medium);
+  padding: 16px;
+  margin: 8px;
+}
+
+.theme-surface-container {
+  background: var(--mat-sys-surface-container);
+  color: var(--mat-sys-on-surface);
+  border-radius: var(--mat-sys-corner-small);
+  padding: 12px;
+  margin: 8px 0;
+}
